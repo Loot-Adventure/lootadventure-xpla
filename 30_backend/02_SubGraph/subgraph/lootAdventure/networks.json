@@ -1,0 +1,13 @@
+{
+  "oasys_mchverce_testnet": {
+    "SoulLootNft": {
+      "address": "0x9C63cCCF43eb5207564C7E2981AA4FD4F2cCD9D3"
+    },
+    "ERC6551Registry": {
+      "address": "0x96D93c1522FC8C7461B7b0a4E20D67FcD9b5f4Ce"
+    },
+    "RLootNft": {
+      "address": "0x1020B0e03C054900Ed0A6db7b0AFa82a38934E19"
+    }
+  }
+}

@@ -1,0 +1,20 @@
+type SoulLootNftAccount @entity {
+  id: ID!
+}
+
+type SoulLootNft @entity {
+  id: ID!
+  owner: User
+  account: SoulLootNftAccount
+}
+
+type User @entity {
+  id: ID!
+  rLootNfts: [RLootNft!]! @derivedFrom(field: "owner")
+  soulLootNfts: [SoulLootNft!]! @derivedFrom(field: "owner")
+}
+
+type RLootNft @entity {
+  id: ID!
+  owner: User
+}
