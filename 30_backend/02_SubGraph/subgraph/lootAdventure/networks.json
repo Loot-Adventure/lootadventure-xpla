@@ -8,6 +8,18 @@
     },
     "RLootNft": {
       "address": "0x1020B0e03C054900Ed0A6db7b0AFa82a38934E19"
+    },
+    "SoulControler": {
+      "address": "0xF341667f7EcEE52B261A1dB70897F636aAb5A9cb"
+    },
+    "EquipmentNft": {
+      "address": "0x8207742A621b876C87B2836eBe14bDf11cC88Ef7"
+    },
+    "ArtifactNft": {
+      "address": "0x0D43baab2EACfeD484b0070E571Faf886Fab5A45"
+    },
+    "JobNft": {
+      "address": "0x1559a6F757e981d71A1104ED6Be6Bac970727D81"
     }
   }
 }

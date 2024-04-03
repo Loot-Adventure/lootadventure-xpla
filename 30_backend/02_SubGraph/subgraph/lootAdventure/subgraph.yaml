@@ -56,10 +56,89 @@ dataSources:
       language: wasm/assemblyscript
       entities:
         - RLootNft
+        - User
       abis:
         - name: RLootNft
           file: ./abis/RLootNft.json
       eventHandlers:
         - event: Transfer(indexed address,indexed address,indexed uint256)
           handler: handleTransferRLootNft
+      file: ./src/mapping.ts
+  - kind: ethereum
+    name: SoulControler
+    network: oasys_mchverce_testnet
+    source:
+      address: "0xF341667f7EcEE52B261A1dB70897F636aAb5A9cb"
+      abi: SoulControler
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - SoulControler
+        - Equipped
+      abis:
+        - name: SoulControler
+          file: ./abis/SoulControler.json
+      eventHandlers:
+        - event: UpdateEquips(address,(uint256,uint256,uint256,uint256,uint256,uint256,uint256,uint256))
+          handler: handleUpdateEquips
+      file: ./src/mapping.ts
+  - kind: ethereum
+    name: EquipmentNft
+    network: oasys_mchverce_testnet
+    source:
+      address: "0x8207742A621b876C87B2836eBe14bDf11cC88Ef7"
+      abi: EquipmentNft
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - Equipment
+      abis:
+        - name: EquipmentNft
+          file: ./abis/EquipmentNft.json
+      eventHandlers:
+        - event: updateEquipment(uint256,uint256,string,uint256,address,uint256,uint256,uint256)
+          handler: handleUpdateEquipment
+      file: ./src/mapping.ts
+  - kind: ethereum
+    name: ArtifactNft
+    network: oasys_mchverce_testnet
+    source:
+      address: "0x0D43baab2EACfeD484b0070E571Faf886Fab5A45"
+      abi: ArtifactNft
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - ArtifactNftMinted
+        - SoulLootNftAccount
+      abis:
+        - name: ArtifactNft
+          file: ./abis/ArtifactNft.json
+      eventHandlers:
+        - event: TransferSingle(indexed address,indexed address,indexed address,uint256,uint256)
+          handler: handleTransferArtifactNft
+      file: ./src/mapping.ts
+  - kind: ethereum
+    name: JobNft
+    network: oasys_mchverce_testnet
+    source:
+      address: "0x1559a6F757e981d71A1104ED6Be6Bac970727D81"
+      abi: JobNft
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - SoulLootNftAccount
+      abis:
+        - name: JobNft
+          file: ./abis/JobNft.json
+      eventHandlers:
+        - event: TransferSingle(indexed address,indexed address,indexed address,uint256,uint256)
+          handler: handleTransferJobNft
       file: ./src/mapping.ts
