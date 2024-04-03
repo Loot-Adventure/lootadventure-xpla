@@ -8,6 +8,7 @@ import {
 
 import { 
   Transfer as TransferRlootNftEvent,
+  RLootNft as RLootNftContract
 } from "../generated/RLootNft/RLootNft"
 
 import { 
@@ -85,6 +86,9 @@ export function handleTransferRLootNft(event: TransferRlootNftEvent): void {
       event.params.tokenId.toString()
     )
   }
+  let rLootNftContract = RLootNftContract.bind(event.address);
+  let tokenURI = rLootNftContract.tokenURI(event.params.tokenId);
+  rLootNft.tokenURI = tokenURI;
   rLootNft.owner = event.params.to.toHexString();
   rLootNft.save();
 }
