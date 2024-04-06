@@ -4,6 +4,32 @@
 
 We are in the process of developing a roguelike game using Unity. This game incorporates MCHVerse - Loot by Rogue NFT assets, converting them into our proprietary ERC6551 assets for use within Unity. For the integration with XPLA, we aim to create an Artifact NFT, designed to influence the in-game status.
 
+## Deployed Addresses
+
+### MCH VERSE
+
+Contract | Address | Abstarct 
+----|-----|-----
+SoulMinter.sol|0x24F5C92d48309a591a87031f55F6802F53189cC3|XX
+SoulControler.sol|0xF341667f7EcEE52B261A1dB70897F636aAb5A9cb|XX
+ERC6551Registry.sol|0x96D93c1522FC8C7461B7b0a4E20D67FcD9b5f4Ce|XXX
+ERC6551Account.sol |0xA9043Ed336130dE936eEa091c4d3b1bE8c418c13|XXX
+SoulLootNft.sol    |0x9C63cCCF43eb5207564C7E2981AA4FD4F2cCD9D3|XXX
+SampleLoot.sol     |0x1020B0e03C054900Ed0A6db7b0AFa82a38934E19|XXX
+EquipmentNft.sol   |0x8207742A621b876C87B2836eBe14bDf11cC88Ef7|ERC1155
+JobNft.sol         |0x1559a6F757e981d71A1104ED6Be6Bac970727D81|xx
+ArtifactNft.sol    |0x0D43baab2EACfeD484b0070E571Faf886Fab5A45|xx
+LaCoin.sol         |0x26b745A62675DfE4D7191c19E234cebDad40CcAB|XP Token used for level up(ERC20)
+
+### XPLA
+
+https://explorer.xpla.io/testnet/address/0x15e4294eA33f19828eCA2B6B2B867aBf0C2509f8
+
+This is NFT Artifact contract which has simple minting function.
+This is SBT and one mint per one address.
+
+In Unity game, if user account has this artifact, it gives 10% atk increase.
+
 ## DEV GUIDE
 
 Our Unity code is currently somewhat proprietary and complex to execute locally. Therefore, we plan to concentrate on the DEV GUIDE on smart contract aspect.
@@ -116,5 +142,15 @@ This gives url to fetch the data from subgraph. It contains
 npx hardhat run scripts/crosschain/mint-xpla-artifact.ts --network xpla
 ```
 
+It displays the deployed contract address.
+Then set env value by
+
+```
+export XPLA_CONTRACT_ADDRESS=<deployed address>
+```
+
+It mint the artifact NFT to the signer.
+
+![data-subgraph](./images/exp.png)
 
 
