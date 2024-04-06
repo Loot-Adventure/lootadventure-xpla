@@ -2,7 +2,7 @@
 
 ## Description
 
-We are in the process of developing a roguelike game using Unity. This game incorporates MCHVerse - Loot by Rogue NFT assets, converting them into our proprietary ERC6551 assets for use within Unity. For the integration with XPLA, we aim to create an Artifact NFT, designed to influence the in-game status.
+We are developing a roguelike game using Unity. This game incorporates MCHVerse - Loot by Rogue NFT assets, converting them into our proprietary ERC6551 assets for use within Unity. For the integration with XPLA, we aim to create an Artifact NFT, designed to influence the in-game status.
 
 ## Deployed Addresses
 
