@@ -4,6 +4,7 @@ import {
 
 import { 
   Transfer as TransferSoulLootNftEvent,
+  SoulLootNft as SoulLootNftContract
 } from "../generated/SoulLootNft/SoulLootNft"
 
 import { 
@@ -68,6 +69,12 @@ export function handleTransferSoulLootNft(event: TransferSoulLootNftEvent): void
       event.params.tokenId.toString()
     )
   }
+  let soulLootNftContract = SoulLootNftContract.bind(event.address);
+  soulLootNft.hp = soulLootNftContract.getMaxHp(event.params.tokenId);
+  soulLootNft.atk = soulLootNftContract.getAttack(event.params.tokenId);
+  soulLootNft.def = soulLootNftContract.getDefence(event.params.tokenId);
+  soulLootNft.turn = soulLootNftContract.getTurn(event.params.tokenId);
+  soulLootNft.rec = soulLootNftContract.getRecovery(event.params.tokenId);
   soulLootNft.owner = event.params.to.toHexString();
   soulLootNft.save();
 }
