@@ -8,6 +8,10 @@ We are developing a roguelike game using Unity. This game incorporates MCHVerse 
 
 ### MCH VERSE
 
+Please check the following addresses here
+
+https://explorer.oasys.sand.mchdfgh.xyz/
+
 Contract | Address
 ----|-----
 SoulMinter.sol|0x24F5C92d48309a591a87031f55F6802F53189cC3
@@ -154,3 +158,17 @@ It mint the artifact NFT to the signer.
 ![data-subgraph](./images/exp.png)
 
 
+## Live App
+
+The game is deployed here.
+
+https://lootadventure.vercel.app/game/prototype/index.html
+
+Because there is less data in testnet, we are using mock data for the game play.
+If you want to try the contract integration with the game, please follow this instruction.
+
+1. Run local subgraph with MCHVerse testnet, and mint Loot by Rogue NFT to the user address. the instruction is kept at DEV GUIDE - MCH Verse section. (Currently, if there is no local subgraph, it uses mock data.)
+
+2. Mint artifact NFT on XPLA network, this instruction is kept at DEV GUIDE - XPLA section.
+
+However, those instructions are for technical reviews, so basic game play does not required this.
