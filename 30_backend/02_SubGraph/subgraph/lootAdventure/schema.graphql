@@ -33,6 +33,11 @@ type SoulLootNft @entity {
   id: ID!
   owner: User
   account: SoulLootNftAccount
+  hp: Int
+  atk: Int
+  def: Int
+  turn: Int
+  rec: Int
 }
 
 type User @entity {
